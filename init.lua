@@ -49,6 +49,11 @@ vim.keymap.set("n", "<leader>v", ":vsplit<CR><C-w>l", { noremap = true })
 vim.keymap.set("n", "<leader>h", ":wincmd h<CR>", { noremap = true })
 vim.keymap.set("n", "<leader>l", ":wincmd l<CR>", { noremap = true })
 
+-- remap ctrl z and ctrl y
+vim.keymap.set("n", "<C-z>", "", {noremap = true})
+vim.keymap.set("i", "<C-z>", "", {noremap = true})
+vim.keymap.set("v", "<C-z>", "", {noremap = true})
+
 -- See `:help telescope.builtin`
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
 vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
@@ -122,6 +127,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 		underline = false,
 	}
 )
+
 
 -- COMMENT
 require("nvim_comment").setup({
