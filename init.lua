@@ -154,7 +154,6 @@ vim.o.background = "dark"
 
 vim.keymap.set("i", "kj", "<Esc>")
 
-vim.opt.guicursor = "i:block"
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.number = false
