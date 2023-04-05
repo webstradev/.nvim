@@ -38,6 +38,9 @@ require("packer").startup(function(use)
 }
 end)
 
+-- clipboard
+vim.opt.clipboard = "unnamedplus"
+
 -- some
 vim.keymap.set("n", "<M-b>", ":Ex<CR>")
 
