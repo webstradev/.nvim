@@ -53,6 +53,13 @@ vim.keymap.set("n", "<C-z>", "", {noremap = true})
 vim.keymap.set("i", "<C-z>", "", {noremap = true})
 vim.keymap.set("v", "<C-z>", "", {noremap = true})
 
+
+-- auto closing bracker
+vim.keymap.set("i", "(", "()<left>", {noremap = true})
+vim.keymap.set("i", "[", "[]<left>", {noremap = true})
+vim.keymap.set("i", "{", "{}<left>", {noremap = true})
+vim.keymap.set("i", "{<CR>", "{<CR>}<ESC>O", {noremap = true})
+
 -- See `:help telescope.builtin`
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
 vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
