@@ -109,11 +109,6 @@ _G.packer_plugins = {
     path = "/home/webstradev/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
-  ["gruvbox.nvim"] = {
-    loaded = true,
-    path = "/home/webstradev/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
-    url = "https://github.com/ellisonleao/gruvbox.nvim"
-  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/webstradev/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -170,6 +165,11 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "/home/webstradev/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
+  ["onedarkpro.nvim"] = {
+    loaded = true,
+    path = "/home/webstradev/.local/share/nvim/site/pack/packer/start/onedarkpro.nvim",
+    url = "https://github.com/olimorris/onedarkpro.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,

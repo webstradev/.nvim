@@ -4,7 +4,7 @@ vim.g.mapleader = " "
 
 require("packer").startup(function(use)
 	use { "wbthomason/packer.nvim" }
-	use { "ellisonleao/gruvbox.nvim" }
+	use "olimorris/onedarkpro.nvim"
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.1',
@@ -44,7 +44,6 @@ end)
 -- clipboard
 vim.opt.clipboard = "unnamedplus"
 
-
 -- some
 vim.keymap.set("n", "<M-b>", ":Ex<CR>")
 
@@ -83,13 +82,6 @@ require'nvim-treesitter.configs'.setup {
 	}
 }
 
--- GRUVBOX
-require("gruvbox").setup({
-	contrast = "hard",
-	palette_overrides = {
-		gray = "#2ea542",
-	}
-})
 
 -- LUALINE
 require("lualine").setup{
@@ -132,6 +124,8 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 	}
 )
 
+-- One Dark Pro
+vim.cmd("colorscheme onedark")
 
 -- COMMENT
 require("nvim_comment").setup({
@@ -141,30 +135,9 @@ require("nvim_comment").setup({
 -- TERMINAL SETUP
 require("toggleterm").setup{
 	direction = "horizontal",
-	size = 15,
+	size = 20,
 	open_mapping = [[<M-j>]]
 }
-
--- COLORSCHEME
-vim.cmd("colorscheme gruvbox")
--- Adding the same comment color in each theme
-vim.cmd([[
-	augroup CustomCommentCollor
-		autocmd!
-		autocmd VimEnter * hi Comment guifg=#2ea542
-	augroup END
-]])
-
-
--- Disable annoying match brackets and all the jaz
-vim.cmd([[
-	augroup CustomHI
-		autocmd!
-		autocmd VimEnter * NoMatchParen 
-	augroup END
-]])
-
-vim.o.background = "dark"
 
 -- Easily exit insert mode
 vim.keymap.set("i", "kj", "<Esc>")
