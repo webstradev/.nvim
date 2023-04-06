@@ -37,7 +37,6 @@ require("packer").startup(function(use)
 	use "CreaturePhil/vim-handmade-hero"
 }
 end)
-
 -- clipboard
 vim.opt.clipboard = "unnamedplus"
 
@@ -151,6 +150,7 @@ vim.cmd([[
 	augroup END
 ]])
 
+
 -- Disable annoying match brackets and all the jaz
 vim.cmd([[
 	augroup CustomHI
@@ -161,7 +161,12 @@ vim.cmd([[
 
 vim.o.background = "dark"
 
+-- Easily exit insert mode
 vim.keymap.set("i", "kj", "<Esc>")
+
+-- append/prepend new line without leaving normal mode 
+vim.keymap.set("n", "<leader>o", "o<Esc>")
+vim.keymap.set("n", "<leader>O", "O<Esc>")
 
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
