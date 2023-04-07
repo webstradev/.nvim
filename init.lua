@@ -177,5 +177,4 @@ vim.o.ignorecase = true
 vim.o.updatetime = 250
 vim.o.timeout = true
 vim.o.timeoutlen = 300
---vim.o.completeopt = 'menuone,noselect'
 vim.o.termguicolors = true
