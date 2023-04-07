@@ -130,6 +130,7 @@ require("onedarkpro").setup({
   highlights = {
     ['@variable.go'] = { link = "Normal" },
     ['@property.go'] = { link = "Normal" },
+    ['@namespace.go'] = { link = "Normal" },
   }
 })
 vim.cmd("colorscheme onedark")
