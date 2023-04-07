@@ -126,6 +126,12 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 )
 
 -- One Dark Pro
+require("onedarkpro").setup({
+  highlights = {
+    ['@variable.go'] = { link = "Normal" },
+    ['@property.go'] = { link = "Normal" },
+  }
+})
 vim.cmd("colorscheme onedark")
 
 -- COMMENT
