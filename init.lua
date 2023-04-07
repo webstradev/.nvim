@@ -135,7 +135,7 @@ require("nvim_comment").setup({
 -- TERMINAL SETUP
 require("toggleterm").setup{
 	direction = "horizontal",
-	size = 20,
+	size = 15,
 	open_mapping = [[<M-j>]]
 }
 
