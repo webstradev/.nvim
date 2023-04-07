@@ -76,7 +76,7 @@ vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { de
 
 -- TREESITTER
 require'nvim-treesitter.configs'.setup {
-	ensure_installed = {"c", "lua", "vim", "go", "javascript", "typescript", "rust"},
+	ensure_installed = {"c", "lua", "vim", "go", "javascript", "typescript", "rust", "tsx", "json", "markdown", "markdown_inline", "yaml", "html"},
 	highlight = {
 		enable = true,
 	}
