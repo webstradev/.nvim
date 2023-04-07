@@ -41,6 +41,7 @@ require("packer").startup(function(use)
 	}
 }
 end)
+
 -- clipboard
 vim.opt.clipboard = "unnamedplus"
 
@@ -138,6 +139,22 @@ require("toggleterm").setup{
 	size = 15,
 	open_mapping = [[<M-j>]]
 }
+
+-- AutoCMD
+local autocmd = vim.api.nvim_create_autocmd
+
+autocmd('FileType', {
+  pattern = {
+    'vim', 'html', 'css', 'json', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'lua'
+  },
+  callback = function()
+    vim.opt.shiftwidth = 2
+    vim.opt.softtabstop = 2
+    vim.opt.tabstop = 2
+  end,
+})
+
+
 
 -- Easily exit insert mode
 vim.keymap.set("i", "kj", "<Esc>")
